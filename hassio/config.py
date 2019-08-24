@@ -138,6 +138,11 @@ class CoreConfig(JsonConfig):
         return Path(HASSIO_DATA, HOMEASSISTANT_CONFIG)
 
     @property
+    def path_extern_dev_bus_usb(self):
+        """Return USB bus device path external for Docker."""
+        return PurePath("/dev/bus/usb")
+
+    @property
     def path_extern_ssl(self):
         """Return SSL path external for Docker."""
         return str(PurePath(self.path_extern_hassio, HASSIO_SSL))

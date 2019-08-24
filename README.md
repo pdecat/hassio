@@ -24,7 +24,7 @@ The development of the supervisor is a bit tricky. Not difficult but tricky.
 - Go into a HassOS device or VM and pull your supervisor.
 - Set the developer modus with cli `hassio supervisor options --channel=dev`
 - Tag it as `homeassistant/xy-hassio-supervisor:latest`
-- Restart the service like `systemctl restart hassos-supervisor | journalctl -fu hassos-supervisor`
+- Restart the service like `systemctl restart hassio-supervisor.service ; journalctl -fu hassio-supervisor`
 - Test your changes
 
 Small Bugfix or improvements, make a PR. Significant change makes first an RFC.
